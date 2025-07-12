@@ -1,8 +1,28 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Make sure you have the following installed:
 
-Currently, two official plugins are available:
+Node.js
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+npm 
+
+
+Clone the repository:
+
+git clone https://github.com/M-Haery/book-finder.git
+
+cd card-shop
+
+
+Install dependencies:
+
+npm install
+
+
+Run the project:
+
+npm run dev
+
+
+To start the json-server that simulates a backend API, run the following command:
+
+npx json-server db.json
