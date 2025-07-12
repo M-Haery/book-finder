@@ -14,7 +14,7 @@ export default function Intresteds() {
   const [selectedBook, setSelectedBook] = useState(null);
 
   useEffect(() => {
-    fetch("https://book-server.liara.run/user")
+    fetch("http://localhost:3000/user")
       .then((res) => res.json())
       .then((users) => {
         const mainUser = users.find((user) => {

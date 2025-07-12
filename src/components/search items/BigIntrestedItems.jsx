@@ -14,7 +14,7 @@ export default function BigIntrestedsItems(props) {
   //handling remove book from favorites (handle in intresteds page)
   function removeFavoritesHandler() {
 
-    fetch("https://book-server.liara.run/user")
+    fetch("http://localhost:3000/user")
     .then((res) => res.json())
     .then((usersData) => {
       const mainUser = usersData.find(
@@ -24,7 +24,7 @@ export default function BigIntrestedsItems(props) {
     })
     .catch((error) => console.error(error));
 
-    fetch("https://book-server.liara.run/user")
+    fetch("http://localhost:3000/user")
       .then((res) => res.json())
       .then((usersData) => {
         const mainUser = usersData.find(
@@ -41,7 +41,7 @@ export default function BigIntrestedsItems(props) {
         return book.id !== props.id;
       });
 
-      fetch(`https://book-server.liara.run/user/${user.id}`, {
+      fetch(`http://localhost:3000/user/${user.id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

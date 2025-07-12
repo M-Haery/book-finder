@@ -14,7 +14,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   function loginHandler() {
-    fetch("https://book-server.liara.run/user")
+    fetch("http://localhost:3000/user")
       .then((res) => res.json())
       .then((usersData) => {
         let user = usersData.find((user) => {

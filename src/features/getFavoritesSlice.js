@@ -8,7 +8,7 @@ const initState = {
 }
 
 export const getFavorites = createAsyncThunk("favorites/getFavorites", async(id) => {
-    const res = await fetch(`https://book-server.liara.run/user/${id}`)
+    const res = await fetch(`http://localhost:3000/user/${id}`)
     const favData = await res.json()
     return favData
 })

@@ -12,7 +12,7 @@ export default function SliderItem(props) {
     setIsIntrested(true)
     setIsIntrested(true);
 
-    fetch("https://book-server.liara.run/user")
+    fetch("http://localhost:3000/user")
       .then((res) => res.json())
       .then((usersData) => {
         const mainUser = usersData.find((user) => user.userName === localStorage.getItem("authToken"));
@@ -23,7 +23,7 @@ export default function SliderItem(props) {
 
   useEffect(() => {
     if (user) {
-      fetch(`https://book-server.liara.run/user/${user.id}`, {
+      fetch(`http://localhost:3000/user/${user.id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -41,7 +41,7 @@ export default function SliderItem(props) {
     function removeFavoritesHandler() {
       setIsIntrested(false);
   
-      fetch("https://book-server.liara.run/user")
+      fetch("http://localhost:3000/user")
         .then((res) => res.json())
         .then((usersData) => {
           const mainUser = usersData.find((user) => user.userName === localStorage.getItem("authToken"));
@@ -56,7 +56,7 @@ export default function SliderItem(props) {
           return book.id !== props.id
         })
        
-        fetch(`https://book-server.liara.run/user/${user.id}`, {
+        fetch(`http://localhost:3000/user/${user.id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",

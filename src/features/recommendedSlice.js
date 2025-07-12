@@ -8,7 +8,7 @@ let initState = {
 }
 
 const fetchBooks = createAsyncThunk("recommended/fetchBooks", async () => {
-    const response = await fetch("https://book-server.liara.run/recommended");
+    const response = await fetch("http://localhost:3000/recommended");
     const books = await response.json();
     return books;
 });

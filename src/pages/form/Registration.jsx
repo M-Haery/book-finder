@@ -22,7 +22,7 @@ export default function Registration() {
   const { error, data, isLoading } = useSelector((state) => state.users);
 
   function signUpHandler() {
-    fetch("https://book-server.liara.run/user")
+    fetch("http://localhost:3000/user")
       .then((res) => res.json())
       .then((usersData) => {
         let isUserNameTaken = usersData.some((user) => {

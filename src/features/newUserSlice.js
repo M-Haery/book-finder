@@ -9,7 +9,7 @@ let initState = {
 
 export const createUser = createAsyncThunk('user/createUser', async (userData) => {
     try {
-        const response = await fetch("https://book-server.liara.run/user", {
+        const response = await fetch("http://localhost:3000/user", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
